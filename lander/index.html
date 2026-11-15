@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#06120b">
+  <title>Freecash – Prämien entdecken</title>
+  <style>
+    :root{--bg:#040805;--hero:#0c1710;--card:#101d16;--card2:#0d1711;--green:#34ff8b;--green2:#18d96a;--text:#f5fff7;--muted:#b0c6b6;--line:rgba(255,255,255,.08);--yellow:#ffd96b;--shadow:0 24px 65px rgba(0,0,0,.46)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at top, rgba(52,255,139,.17), transparent 26%), radial-gradient(circle at 100% 100%, rgba(145,95,255,.15), transparent 35%), linear-gradient(180deg,#06100b,#040805 78%)}
+    a{text-decoration:none;color:inherit}.page{max-width:430px;margin:0 auto;padding:14px 14px 120px}.top{display:flex;justify-content:center;margin:4px 0 14px}.brand{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);box-shadow:0 12px 30px rgba(0,0,0,.25)}.brand img{width:36px;height:36px;border-radius:12px;object-fit:cover}.brand span{font-size:19px;font-weight:900;color:var(--green);letter-spacing:-.04em}
+    .hero{background:linear-gradient(180deg,#0e1a13,#09100c);border:1px solid rgba(52,255,139,.16);border-radius:30px;padding:22px 16px 18px;box-shadow:var(--shadow)}
+    h1{margin:0 0 12px;text-align:center;font-size:clamp(34px,10vw,44px);line-height:1.02;letter-spacing:-.05em}.accent{color:var(--green)}.sub{max-width:370px;margin:0 auto 18px;text-align:center;color:var(--muted);font-size:14px;line-height:1.55}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:14px 10px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:18px;text-align:center}.stat strong{display:block;font-size:16px}.stat span{display:block;margin-top:4px;color:var(--muted);font-size:11px;line-height:1.35}
+    .ctaWrap{position:sticky;bottom:12px;z-index:20;margin-top:16px}.cta{display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#3dff93,#18d96a);color:#031008;border-radius:22px;padding:18px 18px;font-size:21px;font-weight:1000;letter-spacing:-.03em;box-shadow:0 18px 40px rgba(24,217,106,.26);border:1px solid rgba(255,255,255,.06)}.cta small{display:block;font-size:12px;font-weight:800;letter-spacing:0;color:#0a2314;opacity:.9}.ctaText{text-align:center}
+    .important{margin-top:10px;text-align:center;color:#c8d5cd;font-size:12px}.important b{color:#fff}
+    .info{margin:16px 0;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid rgba(52,255,139,.18);border-radius:20px;padding:14px 15px;color:#dbe7df;font-size:13px;line-height:1.55}.info b{color:#fff}
+    .title{margin:18px 0 10px;text-align:center;color:#567063;font-size:12px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+    .offers{display:grid;gap:12px}.offer{display:grid;grid-template-columns:62px 1fr auto;gap:14px;align-items:center;padding:14px;border-radius:24px;background:linear-gradient(135deg,#0f1727 0%, #0f1731 45%, #0b2619 100%);border:1.5px solid rgba(52,255,139,.45);box-shadow:var(--shadow)}.offer:not(.first){background:linear-gradient(135deg,#10172c,#0e1630)}.offer img{width:58px;height:58px;border-radius:16px;object-fit:cover}.offer h3{margin:0 0 4px;font-size:16px;line-height:1.2;display:flex;gap:8px;align-items:center}.badge{display:inline-block;background:linear-gradient(135deg,#ff9e2f,#ffb64f);color:#fff;padding:4px 8px;border-radius:8px;font-size:9px;letter-spacing:.12em;font-weight:900;text-transform:uppercase}.offer p{margin:0;color:#d9e4dd;font-size:12px;line-height:1.45}.mini{display:block;margin-top:6px;color:#99aeb2;font-size:11px}
+    .price{text-align:right;min-width:86px}.price strong{display:block;color:var(--green);font-size:18px;line-height:1.05;font-weight:1000}.price span{display:block;margin-top:5px;color:var(--yellow);font-size:11px;font-weight:900}.price small{display:block;margin-top:3px;color:#9db0a7;font-size:10px}
+    .steps{margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:12px;box-shadow:var(--shadow)}.step{display:grid;grid-template-columns:42px 1fr;gap:12px;padding:12px;border-radius:18px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.05)}.step + .step{margin-top:10px}.num{width:42px;height:42px;border-radius:14px;background:rgba(52,255,139,.12);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:1000}.step h4{margin:0 0 4px;font-size:16px}.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .legal{margin-top:16px;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:#cfdad2;font-size:11px;line-height:1.55;text-align:center}
+    .links{margin-top:10px;text-align:center;font-size:12px;color:#dce6df}.links a{color:#fff}
+    @media(max-width:410px){.stats{grid-template-columns:1fr}.cta{font-size:19px}.price{min-width:76px}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="top"><div class="brand"><img src="assets/freecash-logo.png" alt="Freecash"><span>Freecash</span></div></div>
+    <section class="hero">
+      <h1>Spiele testen<br>und <span class="accent">Prämien entdecken</span></h1>
+      <p class="sub">Registriere dich kostenlos, entdecke verfügbare Angebote und erreiche Spielziele, um Prämien zu erhalten.</p>
+      <div class="stats">
+        <div class="stat"><strong>10-$-Bonus</strong><span>für neue Konten*</span></div>
+        <div class="stat"><strong>2 Minuten</strong><span>für die Kontoerstellung</span></div>
+        <div class="stat"><strong>iOS + Android</strong><span>für beide Plattformen</span></div>
+      </div>
+    </section>
+    <div class="ctaWrap">
+      <a class="cta" id="offerButton" href="https://taprkr.com/r/eyJ0IjoiZnJlZWNhc2gtY3BpIiwidGlkIjoiYWU3Yzk0M2E5MGM1ZmM3M2E1NWUiLCJ0cyI6MTc5NDc2MTk2Mzk2OH0" target="_blank" rel="noopener noreferrer sponsored"><div class="ctaText">Jetzt starten und Prämien entdecken<small>Kostenlose Anmeldung • iOS & Android</small></div></a>
+      <div class="important"><b>Wichtig:</b> Dieses Angebot gilt nur für neue Konten.</div>
+    </div>
+    <div class="info"><b>Wie funktioniert die Auszahlung?</b> Prämien gibt es für qualifizierte, erfolgreich abgeschlossene Ziele. Auszahlungsoptionen und Bedingungen findest du direkt beim Anbieter.</div>
+    <div class="title">Das erwartet dich</div>
+    <div class="offers">
+      <article class="offer first"><img src="assets/block-blast.webp" alt="Block Blast"><div><h3>Block Blast <span class="badge">Beliebt</span></h3><p>Teste das Spiel und erreiche die verfügbaren Levelziele.<span class="mini">Spiele mindestens 30 Minuten.</span></p></div><div class="price"><strong>Bonuspotenzial</strong><span>bis zu 106 $</span><small>★ 5.0</small></div></article>
+      <article class="offer"><img src="assets/subway-surfers.webp" alt="Subway Surfers"><div><h3>Subway Surfers</h3><p>Sieh dir die Aufgaben an und erreiche die geforderten Levelziele.<span class="mini">Spiele mindestens 20 Minuten.</span></p></div><div class="price"><strong>Prämien</strong><span>bis zu 20 $</span><small>★ 4.8</small></div></article>
+      <article class="offer"><img src="assets/coin-master.webp" alt="Coin Master"><div><h3>Coin Master</h3><p>Entdecke weitere Spieleangebote und mögliche Bonusziele.<span class="mini">Spiele mindestens 25 Minuten.</span></p></div><div class="price"><strong>Bonusangebote</strong><span>bis zu 35 $</span><small>★ 4.7</small></div></article>
+    </div>
+    <div class="title">So funktioniert es</div>
+    <section class="steps">
+      <div class="step"><div class="num">1</div><div><h4>Klicke auf den grünen Button</h4><p>Erstelle über diese Seite ein neues Konto und sieh dir anschließend die Angebote an.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h4>Erledige kurze Aufgaben</h4><p>Schließe die ersten Aufgaben ab, um weitere Spiele, Apps und Prämienmöglichkeiten zu entdecken.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h4>Prämien entdecken</h4><p>Erreiche weitere Spielziele und prüfe, welche Prämien für die jeweiligen Angebote verfügbar sind.</p></div></div>
+    </section>
+    <div class="legal">Laut Freecash: über 95 Mio. Nutzer weltweit • durchschnittliche App-Bewertung: 4,5 • über 500 Mio. $ an Prämien ausgezahlt.</div>
+    <div class="links"><a href="https://freecash.com/en" target="_blank" rel="noopener noreferrer">Offizielle Website</a></div>
+  </div>
+</body>
+</html>
